@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: monospace;
+    letter-spacing: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* blue black --> #212529*, brown black --> #292524 */
+:root {
+    --transition: 0.3s ease;
+    --dark: #212529;
+    --black: #212529;
+    --silver: #aaa;
+    --white: #f9f9f9;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --light-gray: #e9ecef;
+    --shade-light: rgb(0, 0, 0, .1);
+    --shade-dark: rgb(0, 0, 0, .3);
+    --layer_super_bottom: -5;
+    --layer_bottom: -1;
+    --layer_middle: 0;
+    --layer_top: 1;
+    --layer_super_top: 5;
+    --border: 2px solid var(--black);
+    --hover-border: 2px solid var(--shade-dark);
+    --border-thick: 1px solid var(--black);
+    --hover-border-thick: 1px solid var(--shade-dark);
+    --hover-shadow: 4px 4px 0px var(--black);
+    --radius: 5px;
+}
+
+::selection {
+    background: var(--black);
+    color: #aaa;
+}
+
+html,
+body {
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: url('../GhostGlow.cur'), auto !important;
+}
+
+a,
+button,
+[role="button"],
+.clickable {
+    cursor: url('../GhostGlow-link.cur'), auto !important;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    z-index: var(--layer_middle);
+    pointer-events: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.option-btn {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--black);
+    background: transparent;
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--radius);
+    transition: background 0.2s, color 0.2s;
+    min-width: 90px;
+    outline: none;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: var(--layer_middle);
+    border: var(--border);
+}
+
+.option-btn:hover {
+    color: var(--white);
+    background: var(--black);
+    transition: background 0.2s, color 0.2s;
+    border: var(--border);
+    cursor: url('../GhostGlow-link.cur'), auto !important;
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: var(--shade-light);
+    z-index: var(--layer_top);
+    color: var(--black);
+}
+
+.navbar-brand img {
+    width: 140px;
+    height: auto;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+    transition: var(--transition);
+    cursor: url('../GhostGlow-link.cur'), auto !important;
+}
+
+.content-area {
+    margin-top: 6rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+#courseFilters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.course-item {
+    position: relative;
+    pointer-events: auto;
+    color: var(--black);
+    font-size: 19px;
+}
+
+.course-item.active {
+    font-weight: 700;
+    border-bottom: 2px solid var(--black);
+}
+
+.topbar {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 12px;
+    border-radius: var(--radius);
+    background-color: rgba(0, 0, 0, 0.1);
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.topbar .search-bar {
+    align-self: flex-end;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: var(--layer_top);
+    pointer-events: auto;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 350px;
+    padding: 7px 10px;
+    border: 2px solid var(--black);
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 1rem;
+    background: var(--white);
+    color: var(--black);
+    box-shadow: 2px 2px 0 var(--black);
+    cursor: url('../GhostGlow-link.cur'), auto !important;
+}
+
+.cs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 3rem;
+}
+
+.content-area .card {
+    flex: 1 1 calc(25% - 20px);
+    width: 270px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    padding: 10px;
+    pointer-events: auto;
+    text-align: left;
+    border: var(--hover-border-thick);
+    border-radius: var(--radius);
+    color: var(--black);
+}
+
+.content-area .card:hover {
+    border: var(--border-thick);
+    transform: translateY(-5px);
+    transition: var(--transition);
+    cursor: url('../GhostGlow-link.cur'), auto !important;
+}
+
+.content-area .card p {
+    padding: 0;
+    margin: 0;
+}
+
+.content-area .banner {
+    position: absolute;
+    top: -11px;
+    right: -109px;
+    background: rgb(255, 115, 0);
+    padding: 15px;
+    width: 350px;
+    text-align: center;
+    transform: rotate(45deg);
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+.content-area .banner-text {
+    display: inline-block;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 100%;
+    position: absolute;
+    left: 13%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content-area .card:hover .banner-text:first-child {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.content-area .card:hover .banner-text:last-child {
+    opacity: 1;
+    transform: translateY(-40%);
+}
+
+.content-area .banner-text:last-child {
+    opacity: 0;
+    transform: translateY(60%);
+}
+
+.content-area .card:hover .banner {
+    background: var(--shade-dark);
+}
+
+.content-area .card__subtitle {
+    font-size: 14px;
+    margin: 15px 0px 0px 0px !important;
+}
+
+.content-area .card__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--black);
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px solid var(--black);
+    margin-bottom: 5px;
+    width: 220px;
+}
+
+.content-area .card_instructor,
+.content-area .card_date,
+.content-area .card_start {
+    font-size: 14px;
+}
+
+.content-area .card_start {
+    margin-top: 20px !important;
+}
+
+.content-area .fee {
+    width: 100%;
+    margin: 10px 0px !important;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background-color: var(--shade-light);
+}
+
+.content-area .fee span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+footer {
+    background: var(--black);
+    color: var(--white) !important;
+    position: relative;
+    padding-top: 20px;
+}
+
+.footer-retro-container {
+    position: relative;
+    z-index: var(--layer_middle);
+    background: var(--black);
+    border-radius: 0 0 24px 24px;
+    border-top: 8px solid var(--white);
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.footer-retro-container .roww {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-retro-container .bio {
+    width: 60%;
+}
+
+.footer-retro-container .links {
+    width: 35%;
+}
+
+.footer-logo {
+    font-family: 'IBM Plex Mono';
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 var(--silver);
+    margin-bottom: 0.5rem;
+}
+
+.footer-desc {
+    margin-bottom: 0;
+}
+
+.footer-title {
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid var(--white);
+    display: inline-block;
+    padding-bottom: 0.2em;
+    font-weight: 700;
+}
+
+.footer-des a,
+.footer-des p {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-social a {
+    color: var(--white);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.3em;
+    transition: background 0.2s, color 0.2s, border 0.2s, transform 0.2s;
+}
+
+.footer-social a:hover {
+    background: var(--white);
+    color: var(--black) !important;
+    transform: scale(1.1) rotate(-360deg);
+    cursor: url('../GhostGlow-link.cur'), auto !important;
+}
+
+.footer-social a i {
+    font-size: 30px;
+}
+
+.footer-bottom {
+    border-top: 1px dashed var(--white);
+    padding-top: 1em;
+}
+
+.footer-bottom p {
+    padding: 0px;
+    margin: 0px;
+}
+
+@media (max-width: 768px) {
+    .footer-retro-container {
+        border-radius: 0;
+        padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    .footer-retro-container .roww {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .roww .bio {
+        width: 100%;
+    }
+
+    .roww .links {
+        width: 100%;
+    }
+
+    .footer-logo {
+        font-size: 1.4rem;
+    }
+
+    .footer-title {
+        font-size: 1rem;
+    }
+
+    .footer-social a {
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
+    }
+
+    .course-item {
+        font-size: 14px;
+    }
+}
