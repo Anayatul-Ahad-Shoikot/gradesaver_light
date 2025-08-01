@@ -91,24 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.preventDefault();
                 return;
             }
-            e.preventDefault();
-            const data = {
-                satisfaction: document.getElementById('satisfaction').value,
-                email: document.getElementById('email').value,
-                student_id: document.getElementById('student_id').value,
-                reasons: document.getElementById('reasons').value
-            };
-            const response = await fetch('save_feedback.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-            if (response.ok) {
-                alert('Thank you for your feedback!');
-                form.reset();
-            } else {
-                alert('Failed to save feedback.');
-            }
         });
     }
 });
