@@ -9,7 +9,7 @@ const mentorData = [
         email: "ashoikot212107@bscse.uiu.ac.bd",
         per_email: "shoikotofficial@gmail.com",
         rating: 2.5,
-        fb_link: "https://www.facebook.com/ahadshoikot",
+        fb_link: "https://www.facebook.com/ItsMeShoikot",
         linkedin_link: "https://www.linkedin.com/in/anayatul-ahad-shoikot",
         about: "I'm excited to meet you and share my passion for math and programming related course. As a mento, I'm committed to help my students and overcome any obstacles they may face when learning. Whether it's a challenging concept or a difficult problem, I'm always available to provide support and guidance.",
         proposed: "ICS - SPL - OOP - DLD - Calculus"
