@@ -56,7 +56,7 @@ const mentorData = [
         rating: 2.5,
         fb_link: "https://www.facebook.com/share/1B15Un5MoS/",
         linkedin_link: "https://www.linkedin.com/in/md-al-akib-483ab4326/",
-        about: "I am a 12th trimester CSE student with the major in Network and Communications. I recently passed the internationally recognized CCNA (Cisco Certified Network Associate) vendor exam and am currently preparing for the RHCSA (Red Hat Certified System Administrator) exam. I am also doing my thesis in Network Security. I'm really interested in networking, especially network infrastructure and internet gateways. Among all university courses, I particularly enjoyed Computer Networks and related major subjects (Data Communication, Cryptography,  Network Security). I've also helped several classmates and juniors succeed in these courses, specially Computer Networks and Computer Networks Laboratory. I'm confident enough that I can support you too. Let's learn together.",
+        about: "I am a 12th trimester CSE student majoring in Network and Communications and doing my thesis in Network Security. I recently passed the internationally recognized CCNA (Cisco Certified Network Associate) vendor exam and am currently preparing for the RHCSA (Red Hat Certified System Administrator) exam. I will be taking the Computer Networks Theory and Laboratory courses together, following the varsity course outline. I will support you like a helpful friend—clearing doubts openly. You will surely enjoy the course as much as I did. Let's learn together and enjoy the journey. Credly Link: https://www.credly.com/badges/c872301f-b66f-4bd1-ad91-cc18004fd316",
         proposed: "CN - DC"
     },
     {
@@ -71,7 +71,7 @@ const mentorData = [
         rating: 2.5,
         fb_link: "https://www.facebook.com/tashin.parvez.5/",
         linkedin_link: "https://www.linkedin.com/in/tashinparvez/",
-        about: "Hi, I'm Md Tashin Parvez, an undergraduate student in the Department of Computer Science and Engineering, currently in my 11th trimester. With a strong academic record and a passion for problem-solving, I have gained hands-on experience teaching key programming courses such as Introduction to Computer Systems (ICS), Structured Programming Language (SPL), and Object-Oriented Programming (OOP)",
+        about: "I'm Md Tashin Parvez, currently in my 11th trimester and serving as an Undergraduate Assistant at the Department of CSE, UIU. I have experience in Competitive Programming and have mentored students in ICS, SPL, and OOP through UIU Scholar's Squad, UIU Computer Club (UIUCCL), and other platforms. I'm passionate about helping students not just pass their courses but truly understand programming concepts and develop strong problem-solving skills. My mentoring focuses on guiding learners step-by-step with real examples, especially in Structured Programming Language (SPL), covering topics from basic C programming to advanced concepts like arrays, pointers, and file handling. I also ensure to revisit essential ICS topics to strengthen foundational knowledge. Let's build confidence, logic, and coding skills — together. Github: https://github.com/TashinParvez . Codeforces: https://codeforces.com/profile/Tashin.Parvez",
         proposed: "ICS - SPL - DSA - DBMS"
     },
     {
