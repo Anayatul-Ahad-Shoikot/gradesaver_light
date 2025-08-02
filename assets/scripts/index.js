@@ -221,3 +221,10 @@ document.querySelectorAll("#courses .course-card").forEach(card => {
         window.location.href = `../../detailsCourse.html?batch=${encodeURIComponent(batch)}`;
     });
 });
+
+document.querySelectorAll('#instructors .course-card').forEach(card => {
+    card.addEventListener("click", () => {
+        const mentor = card.getAttribute("data-mentor");
+        window.location.href = `../../mentorProfile.html?mentor=${encodeURIComponent(mentor)}`;
+    });
+})
